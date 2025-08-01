@@ -1,0 +1,105 @@
+# FairNLP Default Configuration
+# This file contains all default settings for the FairNLP project
+
+model:
+  mbert_model: "bert-base-multilingual-cased"
+  english_bert: "bert-base-uncased"
+  german_bert: "bert-base-german-cased"
+  hindi_bert: "bert-base-hindi"
+  max_length: 512
+  batch_size: 16
+  learning_rate: 2.0e-05
+  num_epochs: 3
+  warmup_steps: 500
+  weight_decay: 0.01
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+  evaluation_strategy: "steps"
+  eval_steps: 500
+  save_steps: 1000
+  logging_steps: 100
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+
+data:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  external_data_dir: "data/external"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  min_text_length: 10
+  max_text_length: 500
+  remove_special_chars: true
+  lowercase: false
+  supported_languages:
+    - "en"
+    - "de"
+    - "hi"
+  demographic_attributes:
+    - "gender"
+    - "age"
+    - "region"
+    - "education"
+
+fairness:
+  bias_threshold: 0.1
+  confidence_level: 0.95
+  fairness_metrics:
+    - "demographic_parity"
+    - "equalized_odds"
+    - "equal_opportunity"
+    - "kl_divergence"
+    - "sentiment_polarity_bias"
+  protected_attributes:
+    - "gender"
+    - "age_group"
+    - "region"
+  mitigation_strategies:
+    - "adversarial_debiasing"
+    - "reweighing"
+    - "preprocessing"
+    - "postprocessing"
+
+shap:
+  background_samples: 100
+  nsamples: 100
+  l1_reg: "auto"
+  explanation_types:
+    - "summary_plot"
+    - "waterfall_plot"
+    - "force_plot"
+    - "dependence_plot"
+  plot_height: 400
+  plot_width: 600
+  save_format: "png"
+  dpi: 300
+
+experiment:
+  random_seed: 42
+  numpy_seed: 42
+  torch_seed: 42
+  cv_folds: 5
+  cv_strategy: "stratified"
+  evaluation_metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1"
+    - "auc"
+  statistical_tests:
+    - "mann_whitney_u"
+    - "chi_square"
+    - "t_test"
+
+logging:
+  log_level: "INFO"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_dir: "logs"
+  log_file: "fairnlp.log"
+  log_components:
+    - "data_preprocessing"
+    - "model_training"
+    - "fairness_analysis"
+    - "shap_analysis" 
