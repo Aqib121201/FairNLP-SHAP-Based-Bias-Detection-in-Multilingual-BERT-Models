@@ -2,20 +2,20 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-passing-green.svg)](https://github.com/your-username/FairNLP-SHAP-Based-Bias-Detection)
-[![DOI](https://img.shields.io/badge/DOI-10.1000/xyz-blue.svg)](https://doi.org/10.1000/xyz)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](https://github.com/Aqib121201/FairNLP-SHAP-Based-Bias-Detection/actions)
 
-## 🧠 Abstract
+
+##  Abstract
 
 This research investigates fairness and bias detection in multilingual BERT models using SHAP (SHapley Additive exPlanations) values. The study compares sentiment analysis and translation outputs across English, German, and Hindi texts, implementing comprehensive fairness metrics including KL divergence, sentiment polarity bias, and demographic parity. Through systematic analysis of model behavior across languages and demographic groups, this work provides insights into the inherent biases present in multilingual language models and proposes mitigation strategies for fairer NLP applications.
 
-## 🎯 Problem Statement
+##  Problem Statement
 
-Multilingual language models, particularly BERT and its variants, have demonstrated remarkable performance across diverse linguistic tasks. However, these models often exhibit systematic biases that can perpetuate social inequalities when deployed in real-world applications. The challenge lies in quantifying and understanding these biases across different languages and demographic groups, particularly in sentiment analysis and translation tasks where cultural and linguistic nuances significantly impact model behavior.
+Multilingual language models, particularly BERT and its variants, have demonstrated remarkable performance across diverse linguistic tasks. However, these models often exhibit systematic biases that can perpetuate social inequalities when deployed in real world applications. The challenge lies in quantifying and understanding these biases across different languages and demographic groups, particularly in sentiment analysis and translation tasks where cultural and linguistic nuances significantly impact model behavior.
 
 Recent studies have shown that language models can exhibit gender, racial, and cultural biases that vary across languages ([Bender et al., 2021](https://doi.org/10.1145/3442188.3445922); [Blodgett et al., 2020](https://doi.org/10.18653/v1/2020.acl-main.485)). This research addresses the critical need for systematic bias detection and quantification in multilingual contexts.
 
-## 📊 Dataset Description
+##  Dataset Description
 
 ### Multilingual Sentiment Dataset
 - **Source**: [Multilingual Amazon Reviews Corpus](https://registry.opendata.aws/amazon-reviews-ml/)
@@ -36,7 +36,7 @@ Recent studies have shown that language models can exhibit gender, racial, and c
 3. **Balancing**: Stratified sampling to ensure demographic parity
 4. **Validation**: Manual annotation of bias indicators by native speakers
 
-## 🧪 Methodology
+##  Methodology
 
 ### Model Architecture
 - **Base Models**: 
@@ -70,13 +70,13 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 - **Language-Specific Analysis**: Separate SHAP analysis per language
 
 ### Experimental Design
-1. **Baseline Training**: Standard fine-tuning on sentiment/translation tasks
+1. **Baseline Training**: Standard fine tuning on sentiment/translation tasks
 2. **Bias Measurement**: Application of fairness metrics
 3. **SHAP Analysis**: Explainability analysis using SHAP values
 4. **Mitigation Strategies**: Implementation of debiasing techniques
-5. **Cross-Validation**: 5-fold cross-validation with stratified sampling
+5. **Cross-Validation**: 5-fold cross validation with stratified sampling
 
-## 📈 Results
+##  Results
 
 ### Performance Metrics
 
@@ -88,15 +88,7 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 | English BERT | English | 0.91 | 0.89 | 0.94 | 0.12 |
 | German BERT | German | 0.88 | 0.86 | 0.91 | 0.16 |
 
-### Bias Analysis Results
 
-![SHAP Summary Plot](./visualizations/shap_summary_plot.png)
-
-*Figure 1: SHAP summary plot showing feature importance across languages*
-
-![Bias Comparison](./visualizations/bias_comparison.png)
-
-*Figure 2: Bias scores comparison across languages and demographic groups*
 
 ### Key Findings
 1. **Language-Specific Bias**: Hindi texts show 23% higher bias scores compared to English
@@ -104,7 +96,7 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 3. **Cultural Bias**: Western cultural references receive 20% higher sentiment scores
 4. **Translation Bias**: Source language significantly influences translation quality
 
-## 🧠 Explainability / Interpretability
+##  Explainability / Interpretability
 
 ### SHAP Analysis Insights
 - **Token-Level Explanations**: Identification of bias-inducing tokens
@@ -116,7 +108,7 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 - **Model Transparency**: Explainable AI for regulatory compliance
 - **Bias Mitigation**: Evidence-based debiasing strategies
 
-## ⚗️ Experiments & Evaluation
+##  Experiments & Evaluation
 
 ### Experiment 1: Baseline Bias Measurement
 - **Objective**: Establish baseline bias levels across languages
@@ -126,7 +118,7 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 ### Experiment 2: SHAP-Based Bias Analysis
 - **Objective**: Understand bias mechanisms through explainability
 - **Method**: SHAP value analysis with demographic stratification
-- **Results**: Identified key bias-inducing features
+- **Results**: Identified key bias inducing features
 
 ### Experiment 3: Debiasing Interventions
 - **Objective**: Test bias mitigation strategies
@@ -138,7 +130,7 @@ DP = |P(\hat{Y} = 1|A = a) - P(\hat{Y} = 1|A = b)|
 - **Seed Control**: Fixed random seeds for reproducibility
 - **Evaluation**: Holdout test set (20% of data)
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 FairNLP-SHAP-Based-Bias-Detection-in-Multilingual-BERT-Models/
@@ -170,7 +162,7 @@ FairNLP-SHAP-Based-Bias-Detection-in-Multilingual-BERT-Models/
 └── run_pipeline.py
 ```
 
-## 💻 How to Run
+## How to Run
 
 ### Prerequisites
 - Python 3.8+
@@ -181,7 +173,7 @@ FairNLP-SHAP-Based-Bias-Detection-in-Multilingual-BERT-Models/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/FairNLP-SHAP-Based-Bias-Detection.git
+git clone https://github.com/Aqib121201/FairNLP-SHAP-Based-Bias-Detection.git
 cd FairNLP-SHAP-Based-Bias-Detection
 
 # Create virtual environment
@@ -221,7 +213,7 @@ docker run -p 8501:8501 fairnlp
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/FairNLP-SHAP-Based-Bias-Detection/blob/main/notebooks/0_EDA.ipynb)
 
-## 🧪 Unit Tests
+##  Unit Tests
 
 ```bash
 # Run all tests
@@ -236,7 +228,7 @@ pytest tests/test_data_preprocessing.py
 
 Test coverage: 85%
 
-## 📚 References
+##  References
 
 1. Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 610-623.
 
@@ -250,7 +242,7 @@ Test coverage: 85%
 
 6. Chouldechova, A. (2017). Fair prediction with disparate impact: A study of bias in recidivism prediction instruments. *Big Data*, 5(2), 153-163.
 
-## ⚠️ Limitations
+##  Limitations
 
 - **Data Scope**: Limited to three languages (English, German, Hindi)
 - **Demographic Coverage**: Focus on gender and cultural bias, limited age/ethnicity analysis
@@ -258,31 +250,30 @@ Test coverage: 85%
 - **Generalization**: Results may not generalize to other languages or domains
 - **Computational Resources**: SHAP analysis computationally intensive for large datasets
 
-## 📄 PDF Report
+##  PDF Report
 
 [📄 Download Full Academic Report](./report/FairNLP_Research_Report.pdf)
 
-## 🧠 Contribution & Acknowledgements
+##  Contribution & Acknowledgements
 
 ### Contributors
-- **Lead Researcher**: [Your Name] - Methodology, Implementation, Analysis
-- **Advisor**: [Advisor Name] - Research Direction, Validation
-- **Research Assistant**: [Assistant Name] - Data Collection, Preprocessing
+- **Lead Researcher**: Aqib Siddiqui - Methodology, Implementation, Analysis
+- **Advisor**: Nadeem Akhtar – System Design Guidance, Industry Validation
+  Engineering Manager II @ SumUp | Ex-Zalando | MS in Software Engineering, University of Bonn
 
 ### Acknowledgements
-- **Institution**: [Your University/Institution]
-- **Funding**: [Funding Source]
-- **Computing Resources**: [Cloud Provider/Cluster]
+
+- **Computing Resources**: Research cluster with 4x V100 GPUs and 128GB RAM
 - **Dataset Providers**: Amazon, OPUS-100 consortium
 
 ### Citation
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{fairnlp2024,
+@misc{fairnlp2024,
   title={FairNLP: SHAP-Based Bias Detection in Multilingual BERT Models},
-  author={Your Name and Advisor Name},
-  journal={arXiv preprint arXiv:2024.xxxxx},
+  author={Aqib Siddiqui and Nadeem Akhtar},
+  note={Manuscript in preparation},
   year={2024}
 }
 ```
@@ -291,6 +282,6 @@ If you use this work in your research, please cite:
 
 **License**: MIT License - see [LICENSE](LICENSE) file for details.
 
-**Contact**: [your.email@institution.edu](mailto:your.email@institution.edu)
+**Contact**: [siddquiaqib@gmail.com](mailto:siddquiaqib@gmail.com)
 
 **Project Status**: Active Research Project
