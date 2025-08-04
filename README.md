@@ -250,10 +250,6 @@ Test coverage: 85%
 - **Generalization**: Results may not generalize to other languages or domains
 - **Computational Resources**: SHAP analysis computationally intensive for large datasets
 
-##  PDF Report
-
-[📄 Download Full Academic Report](./report/FairNLP_Research_Report.pdf)
-
 ##  Contribution & Acknowledgements
 
 ### Contributors
